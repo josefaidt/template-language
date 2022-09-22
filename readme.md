@@ -20,7 +20,7 @@ import { EOL } from 'node:os'
 import { build } from 'template-language'
 
 const result = await build('template.tln')
-fs.writeFileSync(`result.${result.extension}`, output, 'utf8')
+fs.writeFileSync(`result.${result.extension}`, result.content, 'utf8')
 ```
 
 ## TODO
