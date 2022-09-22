@@ -24,4 +24,12 @@ describe('builder', () => {
     const parsed = parse(input)
     expect(generate(parsed.template, { name: 'vitest' })).toBe('vitest')
   })
+
+  it('should build when slot inputs are undefined (fallback to defaults)', () => {
+    const input = new VFile(
+      '<template><slot name="name">world</slot></template>'
+    )
+    const parsed = parse(input)
+    expect(generate(parsed.template)).toBe('world')
+  })
 })
