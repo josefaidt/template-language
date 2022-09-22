@@ -1,3 +1,4 @@
+import { type Text } from 'hast'
 import { type Element, select } from 'hast-util-select'
 import { h } from 'hastscript'
 import { toText } from 'hast-util-to-text'
@@ -11,11 +12,7 @@ export function generate(
     if (!input) {
       throw new Error(`Input "${inputName}" not found in template`)
     }
-    if (typeof inputValue === 'string') {
-      input.children = [h('text', `'${inputValue}'`)]
-    } else {
-      input.children = [h('text', inputValue)]
-    }
+    input.children = [h('text', inputValue)]
   }
   return toText(h('div', template.content))
 }

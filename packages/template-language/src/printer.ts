@@ -25,11 +25,7 @@ export function createPrinter() {
       .join(' ')
   return {
     er: (...message: any[]) => {
-      const msg = message.map((m) => (m ? m : '(blank)'))
-      if (process.env.DEBUG) {
-        msg.splice(0, 0, ts())
-        console.log(c.blue(format(msg)))
-      }
+      console.log(...message)
     },
     info: (...message: any[]) => {
       const msg = message.map((m) => (m ? m : '(blank)'))
