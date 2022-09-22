@@ -6,6 +6,12 @@
   "bin": {
     "tln": "./build/cli.js"
   },
+  "exports": {
+    ".": {
+      "import": "./build/index.js",
+      "types": "./build/index.d.ts"
+    }
+  },
   "scripts": {
     "dev": "pnpm build --watch ./src/*",
     "build": "tsup src/index.ts src/cli.ts --target node16 --format esm --dts --out-dir build",
@@ -31,11 +37,7 @@
     "rehype-parse": "^8.0.4",
     "to-vfile": "^7.2.3",
     "unified": "^10.1.2",
-    "unist-builder": "^3.0.0",
-    "unist-util-filter": "^4.0.0",
-    "unist-util-is": "^5.1.1",
     "unist-util-select": "^4.0.1",
-    "unist-util-visit": "^4.1.1",
     "vfile": "^5.3.5",
     "vfile-reporter": "^7.0.4",
     "zod": "^3.19.1"

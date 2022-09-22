@@ -1,0 +1,3 @@
+<template lang="ts">
+  export const hello = '<slot name="hello-value">world</slot>'
+</template>

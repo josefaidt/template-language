@@ -1,0 +1,11 @@
+{
+  "name": "demo-script",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node script"
+  },
+  "devDependencies": {
+    "template-language": "workspace:*"
+  }
+}

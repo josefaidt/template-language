@@ -3,10 +3,6 @@ import { parse } from './parse'
 import { generate } from './generate'
 import { getFileExtension } from './get-file-extension'
 
-/**
- * @TODO - add `build` function for programmatic usage
- * @param input - path to template file or string
- */
 export async function build(
   input: string,
   inputs: Record<string, string>
