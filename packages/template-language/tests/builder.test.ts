@@ -2,7 +2,7 @@ import { VFile } from 'vfile'
 import { parse } from '$src/parse'
 import { generate } from '$src/generate'
 
-describe('parser', () => {
+describe('builder', () => {
   it('should parse a script', () => {
     const input = new VFile(
       '<script context="module"></script><template></template>'
