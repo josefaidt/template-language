@@ -1,0 +1,47 @@
+{
+  "name": "template-language",
+  "version": "0.1.0",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "build": "turbo run build",
+    "dev": "turbo run dev --parallel",
+    "lint": "turbo run lint",
+    "format": "prettier --write \"**/*.{ts,svelte,md,json}\"",
+    "deploy": "pnpm --filter ./apps/www run deploy",
+    "clean": "rm -rf ./**/*/node_modules ./**/*/build"
+  },
+  "devDependencies": {
+    "eslint-config-custom": "workspace:*",
+    "prettier": "^2.7.1",
+    "prettier-plugin-svelte": "^2.7.0",
+    "svelte": "^3.50.1",
+    "turbo": "^1.4.7"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "dependencies": {},
+  "eslintConfig": {
+    "extends": "custom"
+  },
+  "prettier": {
+    "semi": false,
+    "useTabs": false,
+    "singleQuote": true,
+    "trailingComma": "es5",
+    "printWidth": 80,
+    "pluginSearchDirs": [
+      "."
+    ],
+    "overrides": [
+      {
+        "files": "*.svelte",
+        "options": {
+          "parser": "svelte"
+        }
+      }
+    ]
+  },
+  "packageManager": "pnpm@7.11.0"
+}

@@ -1,0 +1,17 @@
+{
+  "name": "demo-cli",
+  "version": "0.1.0",
+  "description": "",
+  "scripts": {
+    "build": "DEBUG=true tln ./template.tln --hello-value='demo'"
+  },
+  "keywords": [],
+  "author": "josefaidt (https://josef.dev/)",
+  "license": "MIT",
+  "type": "module",
+  "devDependencies": {
+    "typescript": "^4.8.3",
+    "tsconfig": "workspace:*",
+    "vite-node": "^0.23.4"
+  }
+}
